@@ -5,7 +5,22 @@
 2) To run the data cleaning script and visualization notebook, please install the required packages under the `requirements.txt` file in a virtual environment to avoid any version clashes. The following command can be used to install all the requirements:  ``` $ pip install -r /path/to/requirements.txt ```
 3) The data cleaning script is found under the src folder, and is titled `speedoc_clean.py`. Explanations for the steps taken in cleaning and feature engineering is described below and in the script. 
 
-### Folder Structure (Draw it out)
+### Folder Structure
+```
+project
+│   README.md
+│   requirements.txt    
+│
+└───src
+│   │   speedoc_clean.py
+│   │   speedoc_viz.ipynb
+│   │   speedoc_viz.pdf
+│
+│   
+└───data
+    │   austin_bikeshare_stations.csv
+    │   austin_bikeshare_trips.csv
+```
 1) The project directory should contain 2 folders - src and data. 
 2) The src file contains all scripts and notebooks, and the data file should contain the csv data. 
 3) The current working directory would be the src folder. 
