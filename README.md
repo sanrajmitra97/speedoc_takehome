@@ -17,7 +17,7 @@ project
 │   │   speedoc_viz.pdf
 │
 │   
-└───data
+└───data (Not included in this repository, please add in manually)
     │   austin_bikeshare_stations.csv
     │   austin_bikeshare_trips.csv
 ```
@@ -27,7 +27,7 @@ project
 
 
 ### Cleaning and Feature Engineering Process 
-- To run the cleaning data script, please run the following command `python speedoc_clean.py`. Please also ensure that the 2 raw csv files from `https://www.kaggle.com/datasets/jboysen/austin-bike` are located in your local data folder. The output of `speedoc_clean.py` is the prepared data for both trips and stations, found in your data folder.  
+- To clean the original data, please run the `speedoc_clean.py` script in the src folder. Please also ensure that the 2 raw csv files from `https://www.kaggle.com/datasets/jboysen/austin-bike` are located in your local data folder. The output of `speedoc_clean.py` is the prepared data for both trips and stations, found in your data folder.  
 - Summary of cleaning steps here:
     - Check for duplicates: None 
     - Check for NA values:
@@ -46,7 +46,7 @@ project
         - `hour`: The hour of the day
     - We add the following columns to our stations dataset:
         - `days_active`: The number of days the station had at least 1 trip. 
-        - `total_traffic`: The total number of trips where the station acted as a start station or and end station. 
+        - `total_traffic`: The total number of trips where the station acted as a start station or an end station. 
         - `traffic_density`: Given by the formula: `total_traffic`/`days_active`. This is because we care about the traffic each station sees per day on average for the days they were active. This is a better gauge of station popularity compared to a station which was open since 2013, and it's due to that that the have a large trip count. 
 
 ### Key Findings: Please see speedoc_viz.ipynb or speedoc_viz.pdf for vizualizations and key findings explanations
